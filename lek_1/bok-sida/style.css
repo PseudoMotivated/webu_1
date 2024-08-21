@@ -20,4 +20,8 @@ img {
     border: solid 5px darkgray;
     border-radius: 5vh;
     height: 50vh;
+
+}
+img:hover {
+    box-shadow: 5px 5px 5px grey;
 }
