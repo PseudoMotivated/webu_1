@@ -4,6 +4,8 @@ body {
     text-align: center;
     background-color: beige;
     height: 100%;
+    margin: auto;
+    width: 70vw;
 }
 
 h1 {
