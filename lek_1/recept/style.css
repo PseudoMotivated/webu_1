@@ -4,9 +4,15 @@ body {
     background-color: beige;
     margin: auto;
 }
-
+a:hover {
+    color: hotpink;
+}
 h1 {
     font-size: 1.7rem;
+}
+
+h2 {
+    font-size: 1.5rem;
 }
 
 p {
