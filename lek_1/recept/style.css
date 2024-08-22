@@ -4,9 +4,22 @@ body {
     background-color: beige;
     margin: auto;
 }
-h3 {
-    font-size: 1.4rem;
+
+h1 {
+    font-size: 1.7rem;
 }
-li {
+
+p {
     font-size: 1.2rem;
 }
+
+img {
+    border: solid 5px darkgray;
+    border-radius: 5vh;
+    height: 50vh;
+
+}
+img:hover {
+    box-shadow: 5px 5px 5px grey;
+}
+
