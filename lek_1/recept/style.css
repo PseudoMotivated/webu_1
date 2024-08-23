@@ -29,3 +29,12 @@ img:hover {
     box-shadow: 5px 5px 5px grey;
 }
 
+ul {
+    list-style-type: armenian;
+}
+ol {
+    list-style-type: lower-greek;
+}
+li {
+    margin: 1em;
+}
