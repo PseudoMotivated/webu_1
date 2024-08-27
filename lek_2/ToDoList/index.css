@@ -1,0 +1,19 @@
+h1 {
+    color: blueviolet;
+}
+ul {
+    color: blue;
+}
+
+p {
+    color: aqua;
+    font-size: medium;
+}
+body {
+    background-color: azure;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+p:hover {
+    text-shadow: 2px 2px 2px black;
+
+}
