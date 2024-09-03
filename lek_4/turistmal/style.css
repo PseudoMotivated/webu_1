@@ -1,0 +1,30 @@
+body {
+    background-color: beige;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: gray;
+    font-size: 5em;
+    text-align: center;
+}
+.cont {
+
+    margin: auto;
+    max-width: 60vw;
+    padding: 1em;
+    background-color: white;
+    border: 2px solid grey;
+}
+img {
+    max-width:55vw;
+}
+h2 {
+    padding-top: 1em;
+    border-top: dashed;
+    border-width: 2px;
+    border-color: grey;
+}
+p {
+    font-size: 0.8rem;
+}
