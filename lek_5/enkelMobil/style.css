@@ -48,7 +48,7 @@ nav {
     gap: 1em;
     background-color: bisque;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
 
 }
 footer {
