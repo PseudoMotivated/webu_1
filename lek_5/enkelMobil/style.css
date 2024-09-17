@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header {
+    background-color: bisque;
+    padding: 0.5em;
+    color: darkgray;
+}
+img {
+    border-radius: 2em;
+    max-width: 80vw;
+    max-height: 35vh;
+    box-shadow: 0.5em 0.5em 2em ;
+
+    border: 0.3em solid grey;
+}
+.image-box {
+    text-align: center;
+    background-color: red;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 0.5em;
+}
+h2 {
+    margin-bottom: 0.5em;
+}
+a {
+    padding-left: 0.3em;
+    color: aqua;
+}
+
+.box {
+    background-color: red;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+nav {
+    background-color: navy;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+}
+.grid-container {
+    padding: 0.5em;
+    gap: 1em;
+    background-color: bisque;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+footer {
+    background-color: rgb(63, 163, 163);
+    min-width: 100vw;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 0px;
+}
+
+.grid-container div {
+    background-color: blueviolet;
+    border: 0.3em black solid;
+    padding: 1.5em;
+}
+
+@media screen and (max-width: 768px){
+    .grid-container{ 
+        grid-template-columns: auto auto;
+    }
+    
+}
+
+@media screen and (max-width: 480px){
+    .grid-container{ 
+        grid-template-columns: auto ;
+    }
+}
