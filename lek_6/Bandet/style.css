@@ -84,7 +84,7 @@ footer {
     border: 0.2rem solid black;
     border-radius: 1rem 1rem 0rem 0rem ;
     min-height: 3rem;
-    min-width: 100vw;
+    min-width: 100%;
     left: 0;
     bottom: 0; 
     margin-bottom: 0px;
