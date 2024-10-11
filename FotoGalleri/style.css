@@ -1,0 +1,64 @@
+body {
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+background-color: black;
+color: aliceblue;
+}
+
+h1 {
+    border-bottom: 0.2rem solid;
+}
+
+.img-entry {
+    max-width: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.226);
+    box-shadow: 0px 0px 10px 2px;
+    margin: 0 1rem 0 1rem;
+}
+
+.entry-columnA {
+    grid-area: "A";
+}
+
+.entry-columnB {
+    grid-area: "B";
+}
+
+.entry-columnC {
+    grid-area: "C";
+}
+
+.entry-columnD {
+    grid-area: "D";
+}
+
+.entry-columnA,
+.entry-columnB,
+.entry-columnC,
+.entry-columnD {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    "A B C D";
+}
+
+.filler {
+    flex: auto;
+}
+
+@media (max-width:768px) {
+    .grid-container {
+        grid-template-areas: 
+        "A B " "C D";
+    }
+}
+@media (max-width:480px) {
+    .grid-container {
+        grid-template-areas: 
+        "A "" B " "C" "D";
+    }
+}
