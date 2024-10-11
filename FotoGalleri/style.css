@@ -16,19 +16,19 @@ h1 {
 }
 
 .entry-columnA {
-    grid-area: "A";
+    grid-area: A;
 }
 
 .entry-columnB {
-    grid-area: "B";
+    grid-area: B;
 }
 
 .entry-columnC {
-    grid-area: "C";
+    grid-area: C;
 }
 
 .entry-columnD {
-    grid-area: "D";
+    grid-area: D;
 }
 
 .entry-columnA,
@@ -44,10 +44,6 @@ h1 {
     display: grid;
     grid-template-areas: 
     "A B C D";
-}
-
-.filler {
-    flex: auto;
 }
 
 @media (max-width:768px) {
