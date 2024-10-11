@@ -46,6 +46,10 @@ h1 {
     "A B C D";
 }
 
+.filler {
+    flex: auto;
+}
+
 @media (max-width:768px) {
     .grid-container {
         grid-template-areas: 
