@@ -1,0 +1,192 @@
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.description {
+  background-color: rgba(245, 245, 220, 0.349);
+  border-radius: 1rem;
+  padding: 2rem;
+  grid-area: description;
+  max-height: fit-content;
+  margin: 2rem;
+}
+
+body {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: rgb(250, 200, 200);
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "description side"
+    "cards side"
+    "footer footer";
+  grid-template-columns: 4fr 1fr;
+  min-height: 100vh
+}
+
+.side {
+  background-color: rgb(108, 149, 238);
+  max-width: 20vw;
+  grid-area: side;
+  border-radius: 2rem 0 0 2rem;
+  margin: 2rem;
+  margin-right: 0px;
+  padding: 2rem;
+  box-shadow: 2px 2px 2px 2px grey;
+
+}
+.side a {
+  text-decoration: none;
+  color: rgb(224, 10, 243);
+  font-size: larger;
+  font-weight: 600;
+  background-color: rgba(240, 248, 255, 0.151);
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 1rem;
+}
+.side a:hover {
+  color: yellow;
+  text-shadow: 1px 1px 1px yellow;
+}
+
+.cards-container {
+  grid-area: cards;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(5, auto);
+  align-self: center;
+}
+
+header {
+  padding: 1rem;
+  background-color: rgb(179, 241, 86);
+  margin-bottom: auto;
+  box-shadow: 2px 2px 2px 2px grey;
+  border-radius: 0 0 0.5rem 0.5rem;
+  grid-area: header;
+}
+.flip-card div {
+  border-radius: 5px;
+}
+.flip-card img {
+  border-radius: 5px;
+  height: 100%;
+  image-rendering: optimizeSpeed;
+  object-fit: cover;
+  width: 100%;
+}
+
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 5px solid white;
+  perspective: 1100px; /* Remove this if you don't want the 3D effect */
+  margin: auto;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px grey;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: rgb(196, 248, 118);
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer {
+  
+    padding: 1rem;
+    background-color: rgb(179, 241, 86);
+    margin-bottom: 0;
+    box-shadow: 2px 2px 2px 2px grey;
+    border-radius: 0.5rem 0.5rem 0 0;
+    grid-area: footer;
+    margin-top: auto;
+}
+
+
+img {
+  width: 100%;
+  height: 100% "";
+}
+@media (max-width: 1680px) {
+  .cards-container {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+@media (max-width: 1480px) {
+  .cards-container {
+    grid-template-columns: auto auto auto;
+  }
+}
+@media (max-width: 1200px) {
+  .cards-container {
+    grid-template-columns: auto auto;
+  }
+  body {
+    grid-template-areas:
+      "header"
+      "description"
+      "cards "
+      "side"
+      "footer";
+    grid-template-columns: auto;
+  }
+  .side {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 1rem 1rem 0 0;
+    margin: 0;
+  }
+}
+@media (max-width: 780px) {
+  .cards-container {
+    grid-template-columns: auto;
+  }
+  .description {
+    font-size: smaller;
+  }
+}
