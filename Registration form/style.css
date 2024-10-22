@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.regform {
+    margin: auto;
+    border: 1px solid #888;
+    max-width: 90%;
+    background-color: white;
+    padding: 1rem;
+}
+
+hr {
+    margin-bottom: 1rem;
+}
+
+input {
+    margin-bottom: 1rem;
+}
+p {
+    margin: 0.5rem 0rem 0.5rem 0rem;
+}
+
+#reset{
+    background-color: red;
+    width: 50%;
+    padding: 0.5rem;
+    color: white;
+    font-size: medium;
+    margin: 0;
+    border: none;
+}
+#submit{
+    background-color: rgb(2, 199, 61);
+    width: 50%;
+    padding: 0.5rem;
+    color: white;
+    font-size: medium;
+    margin: 0;
+    border: none;
+}
+
+.txtbx {
+    margin: 0.5rem 0rem 1rem  0rem;
+    width: 100%;
+    padding: 0.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+    background-color:  rgb(243, 243, 243);
+    border: none;
+}
+
+
+@media (max-width:480px) {
+    .button-holder {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 0.5rem;
+    }
+    #submit {
+        width: 100%;
+    }
+    #reset {
+        width: 100%;
+    }
+}
