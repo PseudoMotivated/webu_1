@@ -1,0 +1,25 @@
+body {
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+background-color: black;
+color: aliceblue;
+}
+
+h1 {
+    border-bottom: 0.2rem solid;
+}
+
+.img-entry {
+    max-width: 100%;
+    margin-bottom: 1em;
+    border: 2px solid rgba(255, 255, 255, 0.226);
+    box-shadow: 0px 0px 10px 2px;
+}
+
+.grid-container {
+    columns: 250px;
+    column-gap: 2em;
+}
+
+.filler {
+    display: none;
+}
