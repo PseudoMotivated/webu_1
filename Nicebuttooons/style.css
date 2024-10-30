@@ -1,0 +1,151 @@
+body {
+    padding: 1rem;
+    background-color: azure;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    min-height: 100vh;
+}
+div {
+    margin: auto;
+    text-align: center;
+}
+button {
+    margin: 1rem;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    border: 1px solid black;
+
+}
+
+.one, .two , .three , .four {
+    height: 2.5rem;
+    aspect-ratio: calc(7/2.5);
+    border-radius: 5px;
+}
+.one:hover, .two:hover , .three:hover , .four:hover {
+    box-shadow: 2px 2px 2px 2px rgb(197, 197, 197);
+}
+
+.one {
+    background-image: linear-gradient(rgb(69, 114, 114), rgb(80, 190 , 190));
+}
+
+.two {
+    background-image: linear-gradient(to bottom right , rgb(174, 10 , 54 ),  rgb(160, 88, 88) );
+}
+
+.two:hover {
+    background-image: linear-gradient(to bottom left , rgb(174, 10 , 54 ),  rgb(160, 88, 88) );
+}
+
+.three {
+    background-image: linear-gradient(to right, red, orange, yellow, green, rgb(0, 82, 0), blue, purple, violet );
+}
+.three:hover {
+    background-image: linear-gradient(to left, red, orange, yellow, green, rgb(0, 82, 0), blue, purple, violet );
+}
+
+.four {
+    background-image: radial-gradient(blue, purple );
+}
+.four:hover {
+    filter: brightness(90%);
+}
+
+
+.five, .six, .seven, .eight {
+    height: 4rem;
+    aspect-ratio: calc(7/4);
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 0px grey;
+}
+
+.five {
+    background-image: linear-gradient(to right, rgb(69, 114, 114), rgb(80, 190 , 190));
+}
+
+.six {
+    background-image: linear-gradient(to bottom right, rgb(0, 80, 140), rgb(0, 40, 138));
+}
+
+.six:hover {
+    background-image: linear-gradient(to top left, rgb(0, 80, 140), rgb(0, 40, 138));
+}
+
+.seven {
+    background-image: conic-gradient(red, orange, yellow, green, rgb(0, 82, 0), blue, purple, violet, purple, blue, rgb(0, 82, 0), green, yellow, orange,red);
+}
+.seven:hover {
+    background-image: conic-gradient(from 30deg, red, orange, yellow, green, rgb(0, 82, 0), blue, purple, violet, purple, blue, rgb(0, 82, 0), green, yellow, orange,red);
+}
+.eight {
+    background-color: rgb(123, 197, 0);
+    box-shadow: inset 0px 0px 2rem 0px black;
+}
+.eight:hover {
+    background-color: rgb(0, 192, 70);
+}
+
+.nine, .ten, .eleven, .twelve {
+    height: 7rem;
+    aspect-ratio: 1;    
+}
+
+.nine {
+    background-image: linear-gradient(rgb(69, 114, 114), rgb(80, 190 , 190));
+    border-radius: 5px;
+    
+}
+
+.nine:hover {
+    box-shadow: 2px 2px 2px 2px rgb(197, 197, 197);
+}
+
+.ten {
+    border-radius: 50%;
+    background-image: radial-gradient(rgb(0, 80, 140), rgb(0, 40, 138));
+    box-shadow: 0px 0px 10px 0px grey;
+}
+
+.ten:hover {
+    background-image: radial-gradient(rgb(0, 40, 138), rgb(0, 80, 140));
+}
+
+.eleven {
+    border-radius: 50%;
+    background-image: repeating-radial-gradient(#599DA8, rgb(0, 40, 138), #599DA8 20%);
+    box-shadow: 0px 0px 10px 0px grey;
+}
+
+.eleven:hover {
+    background-image: repeating-radial-gradient(#599DA8, rgb(0, 40, 138), #599DA8 33%);
+}
+ /* https://web.dev/articles/at-property */
+@property --drop {
+    syntax: '<percentage>'; /* den säger error i valideringen, koden är helt korrekt, det är bara en ny grej jag vill experimentera med */
+    initial-value: 20%;
+    inherits: false;
+}
+
+@keyframes fadeOut {
+    0% {--drop: 33%}
+    100% {--drop: 20%;}
+}
+
+.twelve {
+    border-radius: 50%;
+    background: repeating-radial-gradient(#599DA8, rgba(57, 204, 13, 0.788), #3309c9 var(--drop));
+    box-shadow: 0px 0px 10px 0px grey;
+    animation: fadeOut 1s forwards;
+    
+}
+@keyframes fadeIn {
+    0% {--drop: 20%}
+    100% {--drop: 33%;}
+}
+
+.twelve:hover {
+    animation: fadeIn 1s forwards;
+    background: repeating-radial-gradient(#599DA8, rgba(57, 204, 13, 0.788), #3309c9 var(--drop));
+}
+
