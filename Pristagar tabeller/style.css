@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  margin: 0.5rem;
+}
+
+table {
+  width: 100%;
+}
+
+hr {
+  margin: 2rem;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: lightgray;
+  margin-top: 2rem;
+}
+
+.t1 tr {
+  border: 1px solid black;
+  border-bottom: 5px dotted green;
+}
+
+.t1 tr:nth-child(even) {
+  background-color: beige;
+}
+
+div {
+  margin: auto;
+  max-width: 80%;
+  padding: 1rem;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.t1 td {
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+
+.t1 td:hover {
+  box-shadow: 1px 1px 2px 1px;
+}
+
+.t2 td,
+.t2 th {
+  padding: 0.5rem;
+  border-bottom: 1px solid black;
+  background-image: linear-gradient(rgb(0, 0, 0), green);
+  border-radius: 5px;
+  color: white;
+}
+
+.t3 td,
+.t3 th,
+.t3 {
+  border: 1px double grey;
+  border-bottom: 2px solid;
+  padding: 0.5rem;
+  background: linear-gradient(to bottom left, grey, white);
+  border-collapse: collapse;
+}
+
+.t3 td:hover,
+.t3 th:hover,
+.t3:hover {
+  background: conic-gradient(white, grey, white);
+}
+
+.t3 td:hover {
+  filter: brightness(90%);
+}
