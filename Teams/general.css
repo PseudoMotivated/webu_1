@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    padding: 1rem;
+    background-color: brown;
+    box-shadow: 2px 2px 1ch 2px;
+    z-index: 10;  
+
+}
+
+body {
+    background-color: #ccc;
+    min-height: 100vh;
+    font-size: larger;
+    overflow-x: hidden;
+}
+
+header {
+    height: 5rem;
+    background-color: beige;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    padding: 1rem;
+    gap: 2rem;
+
+}
+
+.material-symbols-outlined{
+    vertical-align: bottom;
+}
+
+table {
+    width: 100%;
+}
+.t1 tr {
+    border: 1px solid black;
+    border-bottom: 5px dotted green;
+  }
+  
+  .t1 tr:nth-child(even) {
+    background-color: beige;
+  }
+  .t1 tr:nth-child(odd) {
+    background-color: white;
+  }
+  .t1 td {
+    padding: 0.5rem;
+    border: 1px solid black;
+  }
+  
+  .t1 td:hover {
+    box-shadow: 1px 1px 2px 1px;
+  }
+  
+  .t1 th {
+    padding: 1rem;
+    background-color: lightgoldenrodyellow;
+    border: 2px solid grey;
+  }
+
+.content {
+    padding: 2rem;
+}
+.content h1, h2, .content p{
+    margin-bottom: 1rem;    
+}
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+hr {
+    margin: 1rem;
+}
+
+
+nav a {
+    position: relative;
+    margin: 1rem;
+    text-decoration: none;
+}
+
+@keyframes float {
+    0% {
+        top: 0px;
+    }
+    100% {
+        top: -5px;
+    }
+}
+
+nav a:hover { 
+    animation: float 200ms ease-in forwards;
+    color: blueviolet;
+}
+
+.images {    
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    margin: 2rem ;
+}
+
+.images img {
+    border-radius: 8px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px 2px;
+    max-width: 80%;
+    margin: 5px;
+}
+
+@keyframes push {
+    100% {
+        transform: translateX(2px) translateY(2px) ;    
+    }
+}
+
+.images img:hover {
+    position: relative;
+    box-shadow: none;
+    animation: push 50ms ease forwards;
+    
+}
+
+@media (max-width:480px) {
+    body {
+        font-size: medium;
+    }  
+}
