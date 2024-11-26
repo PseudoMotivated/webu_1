@@ -7,22 +7,23 @@ nav {
     position: sticky;
     top: 0;
     padding: 1rem;
-    background-color: brown;
+    background-color: var(--nav-bg);
     box-shadow: 2px 2px 1ch 2px;
     z-index: 10;  
 
 }
 
 body {
-    background-color: #ccc;
+    background-color: var(--body-bg);
     min-height: 100vh;
     font-size: larger;
     overflow-x: hidden;
+    font-family: var(--font-fam);
 }
 
 header {
     height: 5rem;
-    background-color: beige;
+    background-color: var(--header-bg);
 
     display: flex;
     align-items: center;
@@ -33,7 +34,9 @@ header {
     gap: 2rem;
 
 }
-
+nav a {
+    color: black;
+}
 .material-symbols-outlined{
     vertical-align: bottom;
 }
@@ -45,13 +48,16 @@ table {
     border: 1px solid black;
     border-bottom: 5px dotted green;
   }
-  
-  .t1 tr:nth-child(even) {
-    background-color: beige;
-  }
   .t1 tr:nth-child(odd) {
     background-color: white;
+    
   }
+
+  .t1 tr:nth-child(even) {
+    background-color: var(--table-even);
+  } 
+
+
   .t1 td {
     padding: 0.5rem;
     border: 1px solid black;
@@ -63,7 +69,7 @@ table {
   
   .t1 th {
     padding: 1rem;
-    background-color: lightgoldenrodyellow;
+    background-color: var(--table-h);
     border: 2px solid grey;
   }
 

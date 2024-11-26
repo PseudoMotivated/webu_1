@@ -1,23 +1,8 @@
-body {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
- background-color: rgb(209, 135, 66);
+:root {
+    --body-bg: rgb(209, 135, 66);
+    --font-fam:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
+    --nav-bg: rgb(47, 153, 95);
+    --header-bg:  rgb(116, 68, 29);
+    --table-even: rgb(180, 173, 153);
+    --table-h: rgb(93, 133, 71); 
 }
-
-nav {
-    background-color: rgb(47, 153, 95);
-}
-nav a {
-    color: black;
-}
-header {
-    background-color: rgb(116, 68, 29);
-}
-
-.t1 th {
-    padding: 1rem;
-    background-color: rgb(93, 133, 71);
-    border: 2px solid grey;
-  }
-  .t1 tr:nth-child(even) {
-    background-color: rgb(180, 173, 153);
-  }

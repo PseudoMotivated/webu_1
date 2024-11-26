@@ -1,23 +1,8 @@
-body {
-    font-family: cursive;   
-     background-color: rgb(221, 201, 183);
-    }
-    
-    nav {
-        background-color: rgb(179, 59, 38);
-    }
-    nav a {
-        color: black;
-    }
-    header {
-        background-color: rgb(29, 57, 116);
-    }
-    
-    .t1 th {
-        padding: 1rem;
-        background-color: rgb(159, 157, 248);
-        border: 2px solid grey;
-      }
-      .t1 tr:nth-child(even) {
-        background-color: rgb(218, 110, 110);
-      }
+:root{
+    --body-bg: rgb(221, 201, 183);
+    --font-fam: cursive;   
+    --nav-bg: rgb(179, 59, 38);
+    --header-bg: rgb(29, 57, 116);
+    --table-even: rgb(218, 110, 110);
+    --table-h: rgb(159, 157, 248);
+}

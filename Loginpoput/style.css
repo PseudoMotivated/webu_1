@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.button-container {
+    transform: translateX(42px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.start {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-radius: 50%;
+    transform: skewY(-22deg) skewX(45deg);
+
+    box-shadow: -50px 50px 0px;
+    border: 1px solid black;
+}
+
+@keyframes pushbutton {
+    0% {
+        transform: translateY(0px) skewY(-22deg) skewX(45deg);
+        box-shadow: -50px 50px 0px;
+
+    }
+    100% {
+        transform: translateY(50px) skewY(-22deg) skewX(45deg); 
+        box-shadow: 0px 0px 0px black;
+        
+    }
+}
+
+@keyframes begone {
+    0% {
+        opacity: 1;
+    }
+    1% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+    
+}
+
+.start:active {
+    transform: translateY(50px) skewY(-22deg) skewX(45deg);
+    animation: pushbutton 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+.start:active ~ .cylinder-side { 
+    animation: begone 100ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+.start:active ~ .cylinder-side2 { 
+    animation: begone 100ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+
+
+
+.cylinder-side {
+    width: 280px;
+    height: 50px;
+    background: black;
+    position: relative;
+    top: -90px;
+    left: -42px;
+    transform-origin: top;
+    z-index: -1;
+    transform: skewY(10deg) ;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    border-radius: 0 1rem 1rem 0rem;
+}
+
+.cylinder-side2 {
+    width: 282px;
+    height: 53px;
+    background: black;
+    position: relative;
+    top: -157px;
+    left: -41px;
+    transform-origin: top;
+    z-index: -1;
+    transform: skewY(10deg) ;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    border-radius: 10rem 0 0 10rem;
+}
+
+
+.popup {
+    display: none;
+    background-color: aquamarine;
+    height: fit-content;
+    z-index: 100;
+    position: absolute;
+    padding: 1rem;
+
+    border: 1px solid #888;
+    max-width: 90%;
+    background-color: white;
+}
+
+#backdrop {
+    display: none;
+    background-color: #00000088;
+    height: 100vh;
+    width: 100vw;
+    z-index: 99;
+    position: fixed;
+    margin: 0 0 0 0;
+    left: 0;
+    top: 0;
+
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    margin-bottom: 1rem;
+}
+
+input {
+    margin-bottom: 1rem;
+}
+p {
+    margin: 0.5rem 0rem 0.5rem 0rem;
+}
+
+#reset{
+    background-color: red;
+    width: 50%;
+    padding: 0.5rem;
+    color: white;
+    font-size: medium;
+    margin: 0;
+    border: none;
+}
+#submit{
+    background-color: rgb(2, 199, 61);
+    width: 50%;
+    padding: 0.5rem;
+    color: white;
+    font-size: medium;
+    margin: 0;
+    border: none;
+}
+
+.txtbx {
+    margin: 0.5rem 0rem 1rem  0rem;
+    width: 100%;
+    padding: 0.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+    background-color:  rgb(243, 243, 243);
+    border: none;
+}
+
+
+
+@media (max-width:480px) {
+    .button-holder {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 0.5rem;
+    }
+    header {
+      flex-direction: column;
+    }
+
+    #submit {
+        width: 100%;
+    }
+    #reset {
+        width: 100%;
+    }
+}
+
+.login-boring {
+  padding: 0.5rem;
+  background-color: pink;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.login-boring:hover {
+  box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0, 0.342);
+  border: 2px solid black;
+}
+
+header {
+    padding: 2rem;
+    background-color: #831f1f;
+    color: orange;
+    font-size: 3rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .material-symbols-outlined {
+    vertical-align: bottom;
+  }
+  .topnav {
+      background-color: #333;
+      overflow: hidden;
+    }
+    
+    /* Style the links inside the navigation bar */
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    #muges {
+      margin: 1rem;
+    }
+    
+    /* Change the color of links on hover */
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+   #menu {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+    table {
+      padding: 1rem ;
+      width: 100%;
+      max-width: 600px;
+      border: 1px solid;
+      min-height: 150px;
+      background-color: rgb(247, 196, 87);
+      border-radius: 1vw;
+    }
+   
+    td {
+      border-bottom: 2px solid rgb(255, 148, 9);
+      padding: 0.5rem;
+    }
+  
+    th {
+      font-size: 1.2rem;
+      background-color: rgba(66, 42, 6, 0.116);
+      border-radius: 5px;
+      padding: 0.5rem;
+  
+    }
+    
+    .contact {
+      background-color: #ccc;
+      padding: 1rem;
+      margin: 2rem;
+      border-radius: 2rem;
+    
+    }
+  .contact p {
+      padding: 1.2rem;
+      color: white;
+      background-color: #831f1f;
+      border-radius: 2rem ;
+    }
+    .contact a {
+      color: white;
+    }
+  
+    .contact:hover {
+      box-shadow:  10px 4px 3px 5px grey;
+    }
+  
+  
+    .filler {
+      flex: auto;
+    }
+    /* Add an active class to highlight the current page */
+    .topnav a.active {
+      background-color: rgb(253, 156, 76);
+      color: white;
+      background-color: #d88629;
+    }
+    
+    /* Hide the link that should open and close the topnav on small screens */
+    .topnav .icon {
+      display: none;
+    }
+  
+    #muges {
+      columns: 260px;
+      gap: 1rem;
+      text-align: center;
+  
+    }
+    img {
+      width: 100%;
+      box-shadow: 2px 2px 2px 2px;
+      margin-top: 1rem ;
+    }
+  
+  
+    footer {
+      position: static;
+      background-color: #831f1f;
+      padding: 2rem ;
+      margin-top: 2rem ;
+      margin-bottom: 0;   
+      color: white ; 
+    }
+  
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child) {display: none;}
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+      body {
+        font-size: medium;
+      }
+    }
+    
+    /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+    @media screen and (max-width: 600px) {
+      .topnav.responsive {position: relative;}
+      .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    }
+    

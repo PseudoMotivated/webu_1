@@ -1,14 +1,8 @@
-body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: rgb(234, 255, 203);
-}
-
-nav {
-    background-color: yellow;
-}
-nav a {
-    color: black;
-}
-header {
-    background-color: grey;
+:root{
+    --body-bg: rgb(234, 255, 203);
+    --font-fam: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --nav-bg: yellow;
+    --header-bg: grey;
+    --table-even: beige;
+    --table-h: lightgoldenrodyellow;
 }
