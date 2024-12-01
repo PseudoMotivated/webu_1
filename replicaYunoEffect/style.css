@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --element-color: rgb(226, 116, 43);
+  --element-shadow: rgb(136, 69, 25);
+}
+body {
+  background-color: rgb(47, 55, 63);
+  font-family: sans-serif;
+}
+.elements-holder {
+  display: flex;
+  margin: 2rem;
+  flex-flow: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.element {
+  width: 170px;
+  height: 170px;
+  padding: 1rem;
+  color: white;
+  background-color: var(--element-color);
+  border: none;
+  animation: optrude 250ms ease-out forwards;
+  position: relative;
+  z-index: 3;
+}
+.element p,
+.element h1 {
+  align-self: flex-start;
+  text-align: left;
+  font-family: "Source Sans 3", sans-serif;
+  font-style: normal; 
+}
+.element h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+.element p {
+  font-size: 16px;
+  margin-bottom: 2rem;
+  margin-left: 4px;
+}
+.element-shell-shell:has(.backfiller:hover) .element-shell .element,
+.element-shell:hover > .element {
+  animation: protrude 250ms ease-out forwards;
+}
+.backfiller:hover .element {
+  animation: protrude 250ms ease-out forwards;
+}
+.element-shell:hover + .backfiller,
+.backfiller:hover {
+  animation: grow 250ms ease-out forwards;
+}
+.element-shell {
+  position: relative;
+  z-index: 1;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+  width: fit-content;
+  margin: 6px;
+  margin-bottom: 12px;
+  flex-direction: column;
+  align-items: start;
+}
+.element-shell-shell {
+  position: relative;
+  z-index: 0;
+  margin-left: 6px;
+}
+.backfiller {
+  position: absolute;
+  z-index: -1;
+  width: 240.42px;
+  height: 0px;
+  background-color: var(--element-color);
+  transform-origin: left bottom;
+  transform: rotate(-45deg);
+  bottom: 12px;
+  left: 6px;
+  animation: ungrow 250ms ease-out forwards;
+}
+@keyframes grow {
+  0% {
+    height: 0px;
+    background-color: var(--element-color);
+  }
+  100% {
+    height: 15px;
+    background-color: var(--element-shadow);
+  }
+}
+@keyframes ungrow {
+  100% {
+    height: 0px;
+    background-color: var(--element-color);
+  }
+  0% {
+    height: 15px;
+    background-color: var(--element-shadow);
+  }
+}
+@keyframes protrude {
+  0% {
+    box-shadow: 0 0 0 0 var(--element-color);
+    transform: translateY(0px) translateX(0px);
+  }
+  100% {
+    box-shadow: 10px 10px var(--element-shadow);
+    transform: translateY(-10px) translateX(-10px);
+  }
+}
+@keyframes optrude {
+  100% {
+    box-shadow: 0 0 0 0 var(--element-color);
+    transform: translateY(0px) translateX(0px);
+  }
+  0% {
+    box-shadow: 10px 10px var(--element-shadow);
+    transform: translateY(-10px) translateX(-10px);
+  }
+}
