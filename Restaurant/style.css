@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    min-height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    margin: 1rem ;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+
+    background-color: navy;
+    padding: 2rem;
+    color: rgb(213, 238, 238);
+
+    position: sticky;
+    top: 0;
+
+}
+
+
+#menu-icon { 
+    vertical-align: bottom;
+    font-size: 2.5rem;
+}
+
+header h1 { 
+    margin: 0;
+    margin-left: 3rem;
+}
+
+#salad, #kebab, #pizza {
+    scroll-margin: 8rem;
+}
+
+#shoveable {
+    display: none;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(46, 69, 172, 0.747);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#shoveable a {
+    font-size: xx-large;
+    text-decoration: none;
+    color: orange;
+    margin: 1rem;
+}
+
+.menu-holder {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.menu-entry {
+    max-width: 250px;
+    border: 2px solid black;
+    border-radius: 15px ;
+    padding: 1rem ;
+    margin: 1rem ;
+
+    text-align: left;
+}
+
+.menu-entry img {
+    max-width: 100%;
+    border-radius: 1rem ;
+}
+
+footer {
+    background-color: navy;
+    padding: 2rem ;
+    color: white;
+    font-size: large;
+}
+
+
+.contact {
+    margin: 1rem;
+    background-color: rgb(157, 156, 231);
+    padding: 1rem;
+    border-radius: 15px;
+
+    text-align: left;
+}
+
+.contact span {
+    vertical-align: bottom;
+
+}
